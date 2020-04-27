@@ -12,8 +12,22 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-document.querySelector('button').addEventListener('click', () => {
+const startMicro = () => {
   recognition.start();
+};
+
+const stopMicro = () => {
+  recognition.stop();
+};
+
+document.querySelector('button').addEventListener('click', () => {
+  // recognition.start();
+  startMicro();
+});
+
+document.querySelector('pause').addEventListener('click', () => {
+  // recognition.start();
+  stopMicro();
 });
 
 recognition.addEventListener('speechstart', () => {
@@ -33,12 +47,17 @@ recognition.addEventListener('result', (e) => {
 });
 
 recognition.addEventListener('speechend', () => {
-  recognition.stop();
+  // recognition.stop();
 });
 
 recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
 });
+
+recognition.addEventListener('nomatch', (e) => { // extra
+  startMicro();
+});
+
 
 function synthVoice(text) {
   const synth = window.speechSynthesis;
