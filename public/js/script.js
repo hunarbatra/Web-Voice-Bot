@@ -36,10 +36,14 @@ recognition.addEventListener('result', (e) => {
   socket.emit('chat message', text);
 });
 
+recognition.addEventListener('nomatch', (e) => {
+  recognition.start();
+});
+
 /*
 recognition.addEventListener('speechend', () => {
-  recognition.stop();
-}); */
+  //recognition.stop();
+}); */ 
 
 recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
