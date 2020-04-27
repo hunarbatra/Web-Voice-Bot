@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   background: #f7f7f7 url(../images/geometry.png) 0 0 no-repeat;
   background-size: cover;
-  color: #333;
+  color: silver;
 }
 footer {
   font-size: 0.75em;
@@ -30,14 +30,17 @@ h1, h2, h3 {
   margin: 0;
   text-rendering: optimizeLegibility;
   text-align: center;
+  color: silver;
 }
 h1 {
   font-weight: 400;
   font-size: 3em;
+  color: silver;
 }
 h2 {
   font-weight: 300;
   margin-top: 0.5em;
+  color: silver;
 }
 section {
   margin: 1.5em auto;

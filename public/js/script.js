@@ -16,6 +16,10 @@ document.querySelector('button').addEventListener('click', () => {
   recognition.start();
 });
 
+document.getElementById('pause').addEventListener('click', () => {
+  recognition.stop();
+});
+
 recognition.addEventListener('speechstart', () => {
   console.log('Speech has been detected.');
 });
@@ -32,9 +36,10 @@ recognition.addEventListener('result', (e) => {
   socket.emit('chat message', text);
 });
 
+/*
 recognition.addEventListener('speechend', () => {
   recognition.stop();
-});
+}); */
 
 recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
