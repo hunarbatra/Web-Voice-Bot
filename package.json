@@ -7,11 +7,12 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tomomi Imura",
+  "author": "Hunar Batra",
   "license": "MIT",
   "dependencies": {
     "apiai": "^4.0.3",
     "dotenv": "^4.0.0",
+    "dotenv-extended": "^2.8.0",
     "ejs": "^2.5.6",
     "express": "^4.17.1",
     "socket.io": "^2.3.0",
@@ -19,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/girliemac/web-speech-ai.git"
+    "url": "git+https://github.com/hunarbatra/Web-Voice-Bot"
   },
   "bugs": {
-    "url": "https://github.com/girliemac/web-speech-ai/issues"
+    "url": "https://github.com/hunarbatra/Web-Voice-Bot/issues"
   },
-  "homepage": "https://github.com/girliemac/web-speech-ai#readme",
+  "homepage": "https://github.com/hunarbatra/Web-Voice-Bot#readme",
   "keywords": []
 }
